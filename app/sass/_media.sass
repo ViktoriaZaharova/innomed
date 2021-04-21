@@ -200,24 +200,22 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px)
   .header-wrapper
-    display: none
+    margin: 0 auto
+    width: calc(100% - 280px)
+    .list-social, .list-language
+      display: none
+    .name-company
+      margin: 0 auto
+      text-align: center
+    .btn
+      margin: 10px auto 0
 
   header
     padding: 10px 0
     .logo
-      margin: 0
-      max-width: none
-      width: calc(100% - 40px)
-      .logo-text
-        position: relative
-        bottom: 0
-        right: 0
-        margin: 0 auto
-    .logo-icon
-      max-width: 120px
-      display: flex
-      align-items: center
-      justify-content: center
+      max-width: 240px
+      &-text
+        font-size: 18px
 
   h2
     font-size: 40px
@@ -263,6 +261,18 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px)
+  .header-wrapper
+    width: 100%
+    margin: 20px auto
+    order: 1
+
+  header
+    .logo
+      margin: 0 auto 0 0
+
+  .name-company
+    font-size: 12px
+
   footer
     .menu
       justify-content: space-around
@@ -333,10 +343,19 @@
       transform: none
 
   .home-navigation-slider
-    display: none
+    width: 100%
+    margin: 0 0 20px
+    
+  .home-navigation-slider__item
+    text-align: center
 
   .home-wrapper-window
     border-radius: 20px
+
+  .reviews-slider
+    .slick-dots
+      margin: 0 auto 20px
+      justify-content: center
 
 @media only screen and (max-width: 480px)
   .footer-box

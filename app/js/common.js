@@ -26,6 +26,14 @@ $('.reviews-slider').slick({
             settings: {
                 slidesToShow: 1,
             }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                arrows: false,
+                dots: true
+            }
         }
     ]
 
@@ -129,13 +137,25 @@ $('.home-navigation-slider').slick({
     vertical: true,
     focusOnSelect: true,
     asNavFor: '.home-slider',
-    arrows: false
+    arrows: false,
+    infinite: true,
+    responsive: [
+        {
+            breakpoint: 576,
+            settings: {
+                vertical: false,
+                slidesToShow: 2,
+            }
+        }
+    ]
 });
 
 $('.home-slider').slick({
     slidesToShow: 1,
     dots: true,
     fade: true,
+    asNavFor: '.home-navigation-slider',
+    infinite: true,
     appendArrows: '.home-slider__nav',
     appendDots: '.home-slider__nav',
     nextArrow: '<button type="button" class="slick-next"><svg class="svg-icon"><use xlink:href="../img/sprite.svg#next"></use></svg></button>',
